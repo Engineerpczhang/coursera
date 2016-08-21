@@ -3,8 +3,8 @@
 
 
 ##list
-- [week1  Introduction && Linear Regression with One Variable && Linear Algebra Review](./week1/)
-- [week2  Linear Regression with Multiple Variables && Octave/Matlab Tutorial](./week2/)
+- [week1  Introduction && Linear Regression with One Variable && Linear Algebra Review](./Machine Learning-Andrew Ng/week1/)
+- [week2  Linear Regression with Multiple Variables && Octave/Matlab Tutorial](./Machine Learning-Andrew Ng/week2/)
 - [week3  Logistic Regression && Regularization](week3)
 - [week4  Neural Networks: Representation](week4)
 - [week5  Neural Networks: Learning](week5)
