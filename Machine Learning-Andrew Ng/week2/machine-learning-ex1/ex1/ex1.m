@@ -32,6 +32,8 @@ fprintf('Running warmUpExercise ... \n');
 fprintf('5x5 Identity Matrix: \n');
 warmUpExercise()
 
+fprintf("完成第一部分:基本函数.\n");
+
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
@@ -39,42 +41,65 @@ pause;
 
 %% ======================= Part 2: Plotting =======================
 fprintf('Plotting Data ...\n')
+% 加载数据
+
 data = load('ex1data1.txt');
+
+
+% 得到列的数据
 X = data(:, 1); y = data(:, 2);
+
+% 计算长度
 m = length(y); % number of training examples
+
 
 % Plot Data
 % Note: You have to complete the code in plotData.m
-plotData(X, y);
 
+% 画图
+plotData(X, y);
+fprintf("完成第二部分：画图\n");
 fprintf('Program paused. Press enter to continue.\n');
 pause;
+
+
 
 %% =================== Part 3: Gradient descent ===================
 fprintf('Running Gradient Descent ...\n')
 
+% 添加为0的一列
 X = [ones(m, 1), data(:,1)]; % Add a column of ones to x
+
+% 初始化theta
 theta = zeros(2, 1); % initialize fitting parameters
 
-% Some gradient descent settings
-iterations = 1500;
+% 设置参数
+iterations = 1500;  % 步长
 alpha = 0.01;
 
 % compute and display initial cost
+% 计算代价函数
 computeCost(X, y, theta)
 
 % run gradient descent
+% 运行梯度算法
 theta = gradientDescent(X, y, theta, alpha, iterations);
+
+
 
 % print theta to screen
 fprintf('Theta found by gradient descent: ');
 fprintf('%f %f \n', theta(1), theta(2));
+
+
 
 % Plot the linear fit
 hold on; % keep previous plot visible
 plot(X(:,2), X*theta, '-')
 legend('Training data', 'Linear regression')
 hold off % don't overlay any more plots on this figure
+
+
 
 % Predict values for population sizes of 35,000 and 70,000
 predict1 = [1, 3.5] *theta;
@@ -86,6 +111,11 @@ fprintf('For population = 70,000, we predict a profit of %f\n',...
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
+
+
+fprintf("完成第三部分：梯度算法\n");
+
+
 
 %% ============= Part 4: Visualizing J(theta_0, theta_1) =============
 fprintf('Visualizing J(theta_0, theta_1) ...\n')
@@ -114,6 +144,8 @@ figure;
 surf(theta0_vals, theta1_vals, J_vals)
 xlabel('\theta_0'); ylabel('\theta_1');
 
+
+
 % Contour plot
 figure;
 % Plot J_vals as 15 contours spaced logarithmically between 0.01 and 100
@@ -121,3 +153,5 @@ contour(theta0_vals, theta1_vals, J_vals, logspace(-2, 3, 20))
 xlabel('\theta_0'); ylabel('\theta_1');
 hold on;
 plot(theta(1), theta(2), 'rx', 'MarkerSize', 10, 'LineWidth', 2);
+
+fprintf("完成第四部分：可视化\n");

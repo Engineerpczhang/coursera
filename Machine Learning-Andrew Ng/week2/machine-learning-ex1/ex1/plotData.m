@@ -17,7 +17,7 @@ function plotData(x, y)
 figure; % open a new figure window
 
 
-
+% 三点图设置 
 plot(x,y,'rx',10)
 xlabel = 'population'
 ylabel = 'profit'

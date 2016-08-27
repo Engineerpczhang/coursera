@@ -14,6 +14,8 @@ J = 0;
 %               You should set J to the cost.
 
 
+% 代价函数计算
+
 predictions = X * theta;
 sqerrors = (predictions-y).^2;
 J = 1/(2*m) * sum(sqerrors);

@@ -34,7 +34,7 @@ for x=1:num_features,
   mu(x) = mean(X(:,x));
   sigma(x) = std(X(:,x));
   X_norm(:,x) = (X_norm(:,x)-mu(x))/sigma(x);
-
+end;
 
 % ============================================================
 
