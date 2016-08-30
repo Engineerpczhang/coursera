@@ -32,7 +32,7 @@ X = data(:, [1, 2]); y = data(:, 3);
 %  We start the exercise by first plotting the data to understand the 
 %  the problem we are working with.
 
-fprintf(['画出y=0和y=1的散点图']);
+fprintf(['画出y=0和y=1的散点图']\n);
 
 
 plotData(X, y);
