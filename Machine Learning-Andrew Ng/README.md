@@ -37,6 +37,6 @@
 
 
 ##资源
-- [课程笔记](./Machine Learning-Andrew Ng/note/)
-- [Octave](./Machine Learning-Andrew Ng/Octave/)
+- [课程笔记](./note/)
+- [Octave](./Octave/)
 
