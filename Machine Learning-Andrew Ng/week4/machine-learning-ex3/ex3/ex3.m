@@ -32,17 +32,31 @@ num_labels = 10;          % 10 labels, from 1 to 10
 % Load Training Data
 fprintf('Loading and Visualizing Data ...\n')
 
+
+% 数据为手写0-9数字 格式为mat 为Octave/Matlab专有格式
 load('ex3data1.mat'); % training data stored in arrays X, y
+
+% 5000 训练数据 20*20像素 
 m = size(X, 1);
 
 % Randomly select 100 data points to display
+
+%…随机取100个数据展示
+
 rand_indices = randperm(m);
 sel = X(rand_indices(1:100), :);
 
 displayData(sel);
 
+fprintf("第一部分：100个数据展示完成\n");
+
 fprintf('Program paused. Press enter to continue.\n');
 pause;
+
+
+
+
+
 
 %% ============ Part 2: Vectorize Logistic Regression ============
 %  In this part of the exercise, you will reuse your logistic regression
@@ -57,13 +71,18 @@ fprintf('\nTraining One-vs-All Logistic Regression...\n')
 lambda = 0.1;
 [all_theta] = oneVsAll(X, y, num_labels, lambda);
 
+fprintf("第二部分：训练完成\n");
 fprintf('Program paused. Press enter to continue.\n');
 pause;
+
+
+
 
 
 %% ================ Part 3: Predict for One-Vs-All ================
 %  After ...
 pred = predictOneVsAll(all_theta, X);
+fprintf("第三部分：测试数据，计算准确率\n");
 
 fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
 

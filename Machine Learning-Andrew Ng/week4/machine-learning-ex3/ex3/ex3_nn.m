@@ -20,10 +20,16 @@
 clear ; close all; clc
 
 %% Setup the parameters you will use for this exercise
+
+% 设置输出层大小，隐藏层大小，输出结果数量
+
 input_layer_size  = 400;  % 20x20 Input Images of Digits
 hidden_layer_size = 25;   % 25 hidden units
 num_labels = 10;          % 10 labels, from 1 to 10   
                           % (note that we have mapped "0" to label 10)
+
+
+
 
 %% =========== Part 1: Loading and Visualizing Data =============
 %  We start the exercise by first loading and visualizing the dataset. 
@@ -42,8 +48,13 @@ sel = sel(1:100);
 
 displayData(X(sel, :));
 
+fprintf("第一部分：随机100个数据展示\n");
+
 fprintf('Program paused. Press enter to continue.\n');
 pause;
+
+
+
 
 %% ================ Part 2: Loading Pameters ================
 % In this part of the exercise, we load some pre-initialized 
@@ -53,6 +64,11 @@ fprintf('\nLoading Saved Neural Network Parameters ...\n')
 
 % Load the weights into variables Theta1 and Theta2
 load('ex3weights.mat');
+
+fprintf("第二部分：加载已经训练的神经网络\n");
+
+
+
 
 %% ================= Part 3: Implement Predict =================
 %  After training the neural network, we would like to use it to predict
@@ -83,6 +99,7 @@ for i = 1:m
     
     % Pause
     fprintf('Program paused. Press enter to continue.\n');
+    fprintf("第三部分：测试数据，计算准确率\n");
     pause;
 end
 
