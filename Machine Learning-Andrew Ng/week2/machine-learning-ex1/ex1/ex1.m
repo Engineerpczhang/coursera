@@ -67,15 +67,15 @@ pause;
 %% =================== Part 3: Gradient descent ===================
 fprintf('Running Gradient Descent ...\n')
 
-% 添加为0的一列
+% 添加为1的一列
 X = [ones(m, 1), data(:,1)]; % Add a column of ones to x
 
 % 初始化theta
 theta = zeros(2, 1); % initialize fitting parameters
 
 % 设置参数
-iterations = 1500;  % 步长
-alpha = 0.01;
+iterations = 1500;  % 迭代的总次数
+alpha = 0.01; % 步长
 
 % compute and display initial cost
 % 计算代价函数
