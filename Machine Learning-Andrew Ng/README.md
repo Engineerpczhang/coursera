@@ -16,6 +16,7 @@
 - [week11  Application Example: Photo OCR](./week11)
 
 
+ 
 
 ##授课大纲
 - [第1周 简单介绍，单变量线性回归，线性代数复习](./week1/)
@@ -31,9 +32,9 @@
 - [第11周 应用实例：图形文字识别](./week10/)
 
 
-##作业
-- Octavel 
-- Jupyter Notebook
+##练习
+- [Octave] - 使用Octave，默认版本 
+- [Jupyter Notebook](./Jupyter Notebook/) - 使用numpy,pandas,scikit-learn,matplotlib,tensorflow等库的Python3版
 
 
 ##资源
