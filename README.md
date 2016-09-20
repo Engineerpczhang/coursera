@@ -22,7 +22,7 @@
 - 课程进度： 100%
 - 作业：
 	- [Octave] - 使用Octave，默认版本  100%
-	- [Jupyter Notebook](./Jupyter Notebook/) - 使用numpy,pandas,scikit-learn,matplotlib,tensorflow等库的Python3版  12%
+	- [Jupyter Notebook](https://github.com/xxg1413/coursera/tree/master/Machine%20Learning-Andrew%20Ng/Jupyter%20Notebook) - 使用numpy,pandas,scikit-learn,matplotlib,tensorflow等库的Python3版  12%
 
 
 ####机器学习 -- 林軒田 -- 台湾大学
